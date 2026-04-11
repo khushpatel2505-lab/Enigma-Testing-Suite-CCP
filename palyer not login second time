@@ -1,0 +1,17 @@
+// ek player dusri bar login sirf score dekhne ke liye hi kar payega quiz second time nahi de payega
+if (user.loginUser(loggedUser))
+            {
+                Leaderboard lb;
+
+                if (lb.hasAttempted(loggedUser))
+                {
+                    int score = lb.getUserScore(loggedUser);
+
+                    cout << "\nYou already attempted the quiz!\n"; // return in console to player not give quiz second time
+                    cout << "Your Score: " << score << endl; // sirf score dikhayega
+                }
+                else
+                {
+                    quiz.startQuiz(loggedUser);
+                }
+            }
